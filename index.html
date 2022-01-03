@@ -27,31 +27,98 @@
     </div>
   </header>
   <main class="main">
-    <div class="container">
-      <section class="section">
+    <div class="container main-wrap">
+      <div class="main-info">
         <img src="./assets/img/avatar.jpg" alt="Amir on Photo">
         <h1 class="section-title">Amir Abokhssan</h1>
-      </section>
-      <section class ="section" id="about-me">
+      </div>
+      <section class="section" id="about-me">
         <h2 class="section-title">About Me</h2>
+        <p>I am 26 years old, I have been trying to become a developer for some time. I have little experience in this
+          field, worked for Vericheck for six months and developed a web application and a chatbot.
+        </p>
       </section>
-      <section class ="section" id="contacts">
+      <section class="section" id="contacts">
         <h2 class="section-title">Contacts</h2>
+        <ul>
+          <li><b>Phone:</b> +7-911-726-77-23</li>
+          <li><b>E-mail:</b><a href="mailto: a.abokhssan@yandex.ru"> a.abokhssan@yandex.ru</a></li>
+          <li><b>GitHub:</b><a href="https://github.com/a-abokhssan"> a-abokhssan</a></li>
+          <li><b>Twitter:</b><a href="https://twitter.com/acypamir"> acypamir</a></li>
+          <li><b>Telegram:</b><a href="https://t.me/a_abokhssan"> Amir A.</a></li>
+        </ul>
       </section>
-      <section class ="section" id="skills">
+      <section class="section" id="skills">
         <h2 class="section-title">Skills</h2>
+        <ul>
+          <li><strong>HTML</strong></li>
+          <li><strong>CSS</strong></li>
+          <li><strong>JS</strong></li>
+          <li><strong>Ruby</strong></li>
+          <li><strong>Node</strong></li>
+          <li><strong>Express</strong></li>
+          <li><strong>Mongo</strong></li>
+          <li><strong>React</strong></li>
+          <li><strong>Git</strong></li>
+        </ul>
       </section>
-      <section class ="section" id="code">
+      <section class="section" id="code">
         <h2 class="section-title">Code</h2>
+        <pre>
+          <code>
+            import React, { useEffect } from 'react'
+            import { useDispatch } from 'react-redux'
+            import Header from './header'
+            import Cards from './cards'
+            import { getProducts, getRates } from '../redux/reducers/products'
+
+            const Home = () => {
+              const dispatch = useDispatch()
+              useEffect(() => {
+                dispatch(getProducts())
+                dispatch(getRates())
+            }, [])
+            return (
+              &lt;div&gt;
+                &lt;Header /&gt;
+                &lt;Cards /&gt;
+              &lt;/div&gt;
+            )
+            }
+
+            Home.propTypes = {}
+
+            export default Home
+          </code>
+        </pre>
       </section>
-      <section class ="section" id="projects">
+      <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
+        <ul>
+          <li>
+            <a href="https://a-abokhssan.github.io/rsschool-cv/cv">RS School CV Markdown</a>
+          </li>
+          <li>
+            <a href="https://a-abokhssan.github.io/rsschool-cv/">RS School CV HTML&CSS</a>
+          </li>
+        </ul>
       </section>
-      <section class ="section" id="education">
+      <section class="section" id="education">
         <h2 class="section-title">Education</h2>
+        <ul>
+          <li><strong>North-West Institute of Managment</strong></li>
+          <li><strong>Udemy</strong></li>
+          <li><strong>Hexlet</strong></li>
+          <li><strong>SkillCrucial</strong></li>
+        </ul>
       </section>
-      <section class ="section" id="english">
+      <section class="section" id="english">
         <h2 class="section-title">English</h2>
+        <ul>
+          <li><strong>Russian</strong> - native</li>
+          <li><strong>English</strong> - A2</li>
+          <li><strong>French</strong> - A1</li>
+        </ul>
       </section>
     </div>
   </main>
